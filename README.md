@@ -10,16 +10,16 @@ Este programa em Python permite cadastrar informações sobre pessoas, incluindo
 - Exibe o total de pessoas cadastradas.
  
 ## Exemplo de Uso
- Nome: João
- Peso: 75.5
- Continuar? [S/N] S
- Nome: Maria
- Peso: 60.0
- Continuar? [S/N] N
+-  Nome: João
+-  Peso: 75.5
+-  Continuar? [S/N] S
+-  Nome: Maria
+-  Peso: 60.0
+-  Continuar? [S/N] N
 
- Cadastro de Pessoas:
- Nome: João, Peso: 75.5
- Nome: Maria, Peso: 60.0
+### Cadastro de Pessoas:
+ - Nome: João, Peso: 75.5
+ - Nome: Maria, Peso: 60.0
 
- O maior peso é 75.5 e o menor peso é 60.0.
- Total de pessoas cadastradas: 2
+ - O maior peso é 75.5 e o menor peso é 60.0.
+ - Total de pessoas cadastradas: 2
