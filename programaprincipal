@@ -1,0 +1,47 @@
+# Criar lista de cadastro com nome e peso, informar quantas cadastradas e qual o mais pesado e mais leve
+
+def cadastrar_pessoas():
+    """Função para cadastrar pessoas e retornar a lista de pessoas, o maior e o menor peso."""
+    pessoas = []  # Lista para armazenar as informações de cada pessoa
+    mai = men = None  # Inicializa as variáveis para maior e menor peso
+    cont = 0  # Contador de pessoas cadastradas
+
+    while True:
+        # Solicita o nome e peso da pessoa
+        nome = input('Nome: ').strip()
+        peso = float(input('Peso: '))
+
+        # Adiciona as informações à lista de pessoas
+        pessoas.append({'nome': nome, 'peso': peso})
+
+        # Atualiza o maior e menor peso
+        if mai is None or peso > mai:  # Se for a primeira entrada ou peso maior
+            mai = peso
+        if men is None or peso < men:  # Se for a primeira entrada ou peso menor
+            men = peso
+
+        cont += 1  # Incrementa o contador de pessoas cadastradas
+
+        # Pergunta se o usuário deseja continuar cadastrando
+        resp = input('Continuar? [S/N] ').strip().upper()
+        if resp == 'N':
+            break
+
+    return pessoas, mai, men, cont
+
+def exibir_resultados(pessoas, maior, menor, total):
+    """Função para exibir os resultados do cadastro."""
+    print("\nCadastro de Pessoas:")
+    for pessoa in pessoas:
+        print(f"Nome: {pessoa['nome']}, Peso: {pessoa['peso']}")
+
+    print(f'\nO maior peso é {maior} e o menor peso é {menor}.')
+    print(f'Total de pessoas cadastradas: {total}')
+
+def main():
+    """Função principal que executa o programa."""
+    pessoas, maior, menor, total = cadastrar_pessoas()
+    exibir_resultados(pessoas, maior, menor, total)
+
+if __name__ == "__main__":
+    main()
